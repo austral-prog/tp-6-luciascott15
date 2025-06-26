@@ -1,20 +1,23 @@
-# Replace the "ANSWER HERE" with your answer
-
 def remove_elements(list_to_remove_elements):
-    return "ANSWER HERE"  # Remove this line and implement
-
+	indices_a_eliminar = [0, 4, 5]
+	return [element for index, element in enumerate(list_to_remove_elements) if index not in indices_a_eliminar]
 
 def add_elements(list_to_add_elements):
-    return "ANSWER HERE"  # Remove this line and implement
-
+	list_to_add_elements.append('Yellow')
+	list_to_add_elements.insert(0, 'Pink')
+	return list_to_add_elements
 
 def is_empty(list_to_check):
-    return "ANSWER HERE"  # Remove this line and implement
-
+	return len(list_to_check) == 0
 
 def check_lists(list_to_compare1, list_to_compare2):
-    return "ANSWER HERE"  # Remove this line and implement
-
+	if len(list_to_compare1) > 2 and len(list_to_compare2) > 2:
+		return list_to_compare1[2] == list_to_compare2[2]
+	else:
+		return False 
 
 def list_of_lists(list_of_lists_to_modify):
-    return "ANSWER HERE"  # Remove this line and implement
+	first = list_of_lists_to_modify[0][ :2]
+	second = list_of_lists_to_modify[1][1:4]
+	third = list_of_lists_to_modify[2][-2: ]
+	return [first, second, third]
